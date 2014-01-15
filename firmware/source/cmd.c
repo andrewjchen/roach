@@ -174,9 +174,11 @@ unsigned char cmdSetThrustOpenLoop(unsigned char type, unsigned char status, uns
 
     tiHSetDC(1, thrust1);
     tiHSetDC(2, thrust2);
-    delay_ms(run_time_ms);
-    tiHSetDC(1,0);
-    tiHSetDC(2,0);
+    tiHSetDC(3, thrust1);
+    tiHSetDC(4, thrust2);
+//    delay_ms(run_time_ms);
+//    tiHSetDC(1,0);
+//    tiHSetDC(2,0);
 
     EnableIntT1;
     return 1;
